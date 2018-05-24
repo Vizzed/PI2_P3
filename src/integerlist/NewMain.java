@@ -34,7 +34,7 @@ public class NewMain {
         typ = Integer.parseInt(br.readLine());
 
         if (typ == 1) {
-            ArrayIntegerList<Integer> ail = new ArrayIntegerList<Integer>(eingabe);
+            ArrayGList<Integer> ail = new ArrayGList<Integer>(eingabe);
             while (loop) {
                 System.out.println("Menü:");
                 System.out.println("1: getLength");
@@ -81,7 +81,7 @@ public class NewMain {
 
         if (typ == 2) {
 
-            ArrayIntegerList<Double> ail = new ArrayIntegerList<Double>(eingabe);
+            ArrayGList<Double> ail = new ArrayGList<Double>(eingabe);
 
             while (loop) {
                 System.out.println("Menü:");
@@ -123,6 +123,7 @@ public class NewMain {
                     default:
                         System.out.println("Falsche Eingabe!");
                         break;
+                        
                 }
             }
         }

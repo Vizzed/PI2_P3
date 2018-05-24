@@ -9,12 +9,12 @@ package integerlist;
  *
  * @author Wladislaw
  */
-public class ArrayIntegerList<T> implements IntegerList<T> {
+public class ArrayGList<T> implements GList<T> {
 
     private T[] array;
     private int size;
 
-    public ArrayIntegerList(int laenge) {
+    public ArrayGList(int laenge) {
         this.size = 0;
         array = (T[]) new Object[laenge];
     }
@@ -61,8 +61,10 @@ public class ArrayIntegerList<T> implements IntegerList<T> {
 
     @Override
     public boolean search(T value) {
+            
         for (int i = 0; i < size; i++) {
-            if (array[i] == value) {
+            if (array[i].equals(value) ) {
+             //   (double)array[i]-value;
                 return true;
             }
         }

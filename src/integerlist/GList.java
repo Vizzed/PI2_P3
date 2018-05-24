@@ -9,7 +9,7 @@ package integerlist;
  *
  * @author Wladislaw
  */
-public interface IntegerList<T>{
+public interface GList<T>{
 
     int getLength();
     int insertLast(T value);
