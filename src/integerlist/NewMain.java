@@ -5,6 +5,7 @@
  */
 package integerlist;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 import java.io.*;
 
 /**
@@ -43,7 +44,8 @@ public class NewMain {
                 System.out.println("4: deleteFirst");
                 System.out.println("5: search");
                 System.out.println("6: print");
-                System.out.println("7: beenden");
+                System.out.println("7:append");
+                System.out.println("8: beenden");
                 eingabe = Integer.parseInt(br.readLine());
                 switch (eingabe) {
                     case 1:
@@ -70,6 +72,19 @@ public class NewMain {
                         ail.print();
                         break;
                     case 7:
+                        System.out.println("Geben Sie die Größe des Arrays ein:");
+                        int hilfe1 = Integer.parseInt(br.readLine());
+                        Integer[] values = new Integer[hilfe1];
+                        System.out.println("Geben Sie die Werte fuer den Array ein:");
+                        for (int i = 0; i < hilfe1; i++) {
+                            System.out.println((i + 1) + ". Wert:");
+                            int hilfe2 = Integer.parseInt(br.readLine());
+                            values[i]=hilfe2;
+                            
+                        }
+                        System.out.println(ail.append(values));
+                        break;
+                    case 8:
                         loop = false;
                         break;
                     default:
@@ -91,7 +106,8 @@ public class NewMain {
                 System.out.println("4: deleteFirst");
                 System.out.println("5: search");
                 System.out.println("6: print");
-                System.out.println("7: beenden");
+                System.out.println("7: append");
+                System.out.println("8: beenden");
                 eingabe = Integer.parseInt(br.readLine());
                 switch (eingabe) {
                     case 1:
@@ -117,13 +133,27 @@ public class NewMain {
                     case 6:
                         ail.print();
                         break;
+
                     case 7:
+                        System.out.println("Geben Sie die Größe des Arrays ein:");
+                        int hilfe1 = Integer.parseInt(br.readLine());
+                        Double[] values = new Double[hilfe1];
+                                double hilfe2;
+                        System.out.println("Geben Sie die Werte fuer den Array ein:");
+                        for (int i = 0; i < hilfe1; i++) {
+                            System.out.println((i + 1) + ". Wert:");
+                             hilfe2 = Double.parseDouble(br.readLine());
+                            values[i]=hilfe2;
+                        }
+                        System.out.println(ail.append(values));
+                        break;
+                    case 8:
                         loop = false;
                         break;
                     default:
                         System.out.println("Falsche Eingabe!");
                         break;
-                        
+
                 }
             }
         }

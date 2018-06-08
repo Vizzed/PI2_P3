@@ -40,8 +40,8 @@ public class ArrayGList<T> implements GList<T> {
         if (size != 0) {
             return array[0];
         }
-        //return -9999;
         return null;
+       
     }
 
     @Override
@@ -78,5 +78,16 @@ public class ArrayGList<T> implements GList<T> {
             System.out.println(array[i]);
         }
     }
-
+    
+    int append (T[] values)
+    {
+        if((array.length-size)>=values.length){
+            for (int i = 0; i <values.length; i++) {
+                insertLast(values[i]);
+               
+            }
+             return 0;
+        }
+        return -1;
+    }
 }
